@@ -23,21 +23,15 @@
 # OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-DRAWIO_OPT="--export --format pdf --crop --transparent --border 10 --page-index 1"
-DRAWIO_BIN="$(type -P drawio)" || ( \
-              echo "Executable not found: 'drawio'" >&2 ; exit 1 )
+SCRIPT_NAME="${0##*/}"
+SCRIPT_PATH="$( cd "${0%/*}" && pwd -P )"
 
-PDFTOCAIRO_OPT="-svg -nocrop -noshrink -nocenter -f 1 -l 1"
-PDFTOCAIRO_BIN="$(type -P pdftocairo)" || ( \
-                  echo "Executable not found: 'pdftocairo'" >&2 ; exit 1 )
+ASPELL_OPT="--lang=de_DE --personal="${SCRIPT_PATH}/${SCRIPT_NAME}.pws""
+ASPELL_BIN="$(type -P aspell)" || ( \
+              echo "Executable not found: 'aspell'" >&2 ; exit 1 )
 
-for drawio in *.drawio; do
-  pdf="${drawio%.drawio}.pdf"
-  svg="${drawio%.drawio}.svg"
-  "${DRAWIO_BIN}" ${DRAWIO_OPT} --output "${pdf}" "${drawio}"
-  "${PDFTOCAIRO_BIN}" ${PDFTOCAIRO_OPT} "${pdf}" "${svg}"
-  echo "${pdf} -> ${svg}"
-  rm -vf "${pdf}"
+for markdown in *.md; do
+  "${ASPELL_BIN}" ${ASPELL_OPT} --mode=html check "${markdown}"
 done
 
 exit 0
