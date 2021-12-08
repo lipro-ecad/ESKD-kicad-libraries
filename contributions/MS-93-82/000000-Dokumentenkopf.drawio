@@ -1,1 +1,57 @@
-<mxfile host="Electron" modified="2021-12-01T22:01:55.051Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/15.8.4 Chrome/91.0.4472.164 Electron/13.6.2 Safari/537.36" etag="BY3mUJnQcNWWZ_UHB99r" version="15.8.4" type="device"><diagram id="yYwLtTzyvhaKZbNxficX" name="Page-1">7ZrbcuI4EEC/xo/ZwjZx4JE4hDCTbNUCszxuKbawVQjLkWUu+fptYfmGnMTM5MZMqqhE3ZLaUvdxq5Vg2O5qO+IoDu+Yj6lhdfytYV8ZlmV2LcuQn46/yzS9i16mCDjx1aBSMSWPOFOeK2VKfJzUxgnGqCBxXemxKMKeqOkQ52xTH7ZgtP7QGAVYU0w9RHXtnPgiVFrT6ZcdN5gEoXp0z7rIOlYoH9zJFEmIfLapqOyhYbucMZG1VlsXU+m73C3ZvOsneouFcRyJNhOczSaZfXO29nbgdB//4WSQoDNlZY1oqjasFit2uQcCztLYsC8RpWwzyF3aAY3PWTxDPMBCKTj2Up6QNZ7gJAuk1OJtjCJfCSu2RvcUFxNgXFVmAomKDDDhquxRFuGKrFaPucDbJhzU0DIIVXeZRRAAXsxWWPAdDFGGbAXgri5uqhCYympYAcDsKyVS5AWF6TI40FDxaY7VfDZPzf9mndF4a3eDH+agdzdrE6tNSASexsiT8gZeSPBRKFbwmCsTmongbIldRhkHTQS+BOWCUJqrDMteLBaW54GegRki5PZtW7q+5tFOIxCvHv/DeB/yoAf1WcoPOdGD/z7hTfC/39fuw3r2mPwYPyy/rfDVbZvwQgqJZVO5AOKJuJiWnoYYCUQizAuZUhQnpOLQkFD/Fu1YKnI7uXRAh48XKKVSH3DkE3DwATcvvZuHsTyMdZ0EHSYduCqpahEoibOsvyBb7B/CpiWoV+dF9VpmPVvoycLpNcHUeyuYrPYwgTcEQXQifR0Fe650bjRPxoxEAvPhGjyZPB0fwWLVSfEin3vPhGCrHAvljsLo3hXnl/AB57idv86Nc1iuC7JZyvCRwzlAGQG3AL20gVEiNjh5DuaD/HNkvtEprfGmpbPGfKiDrWP5bIY4Ko01gtd9K+5sjbs7LELmk8QLMXTckGiDSSKbjymHn1OAzkccBhDM0yg4BtPKydZ08Ol+ZuC6Bd0XYSHxfRy9GrSVN0E/aEv6FpCgVb42u5+DxpbsWe/CnrJWBvl4c4hCMCIk8CVLIz/RiC5W+vOQd7+S65+cXHd18F485N8s2Z43cOgUeaYGpPOQsrzjLHPXAAaY3XhbdkIrkL+HJIINCEogZycyR+8SgVfyDg+VpXrCPc9Hf99Dki4FgYbPlukKHI2ktJ8hDUxG83webDRbXDZZN3fsFiC0DVso7OaKEZALqWF/wmT76Ey9EDSPWG5TrnVhuLZx6TZsMRsZUzlg0I1wYWJI8RLeBYG9MCJLfeKKyD2ogO/PQPmgaxKkXLYKl9wfrltz0+98Kn6CtNEySXRbJ4lfygo/cQxq9t7hHHRO7MaqXRY/xRX2Y26sL91XrcY/frzZffXiq6Q69dzotEbw4zDrPVkxJeCWVhWT01RuTAYzea7L+qDvTvQ6YDQcDf+eDsez8Wio987Hk9nUvRlcz6Y349vrYaUIyJb1JxQB1auxc1LgX7wP+M8XBe3svUNR0P8qCk62KOj1P1lZkD/tqy740LpAR/aXEma/NZcfSJ7+77i7Kch9+6x3FIMnfRLLoGSy2qucJ+NGPEQHlASRTL9yJSd0XhdJ5Xc/sEEsv16SDS+/o2MP/wc=</diagram></mxfile>
+<mxfile host="Electron" modified="2021-12-08T07:53:04.975Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/15.8.4 Chrome/91.0.4472.164 Electron/13.6.2 Safari/537.36" etag="hmi_ODE49Gxm9ziQBdg1" compressed="false" version="15.8.4" type="device">
+  <diagram id="yYwLtTzyvhaKZbNxficX" name="Page-1">
+    <mxGraphModel dx="1422" dy="878" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6wwsTJ6x3xA64zQriAsa-1" value="" style="group;allowArrows=0;dropTarget=0;recursiveResize=0;expand=0;movable=0;resizable=0;rotatable=0;deletable=0;cloneable=0;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="35" y="35" width="1110" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="WTWu1_T0GIx34gU1A8MT-1" value="" style="whiteSpace=wrap;html=1;strokeColor=none;fillColor=#fff2cc;opacity=33;connectable=0;allowArrows=0;recursiveResize=0;expand=0;movable=0;resizable=0;rotatable=0;cloneable=0;deletable=0;" parent="6wwsTJ6x3xA64zQriAsa-1" vertex="1">
+          <mxGeometry width="1110" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="seVKvCqvTzsUIqkJmeDL-1" value="" style="shape=table;startSize=0;container=0;collapsible=0;childLayout=tableLayout;strokeColor=default;gradientColor=none;deletable=0;cloneable=0;rotatable=0;resizable=0;movable=0;allowArrows=0;connectable=0;fillColor=none;aspect=fixed;expand=0;dropTarget=0;" parent="6wwsTJ6x3xA64zQriAsa-1" vertex="1">
+          <mxGeometry x="215" y="5" width="680" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="seVKvCqvTzsUIqkJmeDL-2" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=default;movable=0;rotatable=0;cloneable=0;deletable=0;allowArrows=0;expand=0;resizable=0;recursiveResize=0;connectable=0;" parent="seVKvCqvTzsUIqkJmeDL-1" vertex="1">
+          <mxGeometry width="680" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="seVKvCqvTzsUIqkJmeDL-3" value="Methodische Hinweise zur Standardisierung" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;strokeColor=default;fontSize=14;movable=0;rotatable=0;cloneable=0;deletable=0;allowArrows=0;expand=0;resizable=0;recursiveResize=0;" parent="seVKvCqvTzsUIqkJmeDL-2" vertex="1">
+          <mxGeometry width="680" height="40" as="geometry">
+            <mxRectangle width="680" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seVKvCqvTzsUIqkJmeDL-4" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=default;movable=0;rotatable=0;cloneable=0;deletable=0;allowArrows=0;expand=0;resizable=0;recursiveResize=0;connectable=0;" parent="seVKvCqvTzsUIqkJmeDL-1" vertex="1">
+          <mxGeometry y="40" width="680" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="seVKvCqvTzsUIqkJmeDL-5" value="&lt;font style=&quot;font-size: 14px&quot;&gt;Einheitliches System der&lt;br&gt;Konstruktionsdokumentation des RGW&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;&lt;b&gt;Gestaltung der Schaltzeichen für&lt;br&gt;Schaltpläne der Elektrotechnik&lt;br&gt;mit geometrischen Figuren&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;strokeColor=default;movable=0;rotatable=0;cloneable=0;deletable=0;allowArrows=0;expand=0;resizable=0;recursiveResize=0;" parent="seVKvCqvTzsUIqkJmeDL-4" vertex="1">
+          <mxGeometry width="680" height="140" as="geometry">
+            <mxRectangle width="680" height="140" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seVKvCqvTzsUIqkJmeDL-6" value="" style="shape=table;startSize=0;container=0;collapsible=0;childLayout=tableLayout;strokeColor=default;gradientColor=none;aspect=fixed;deletable=0;cloneable=0;rotatable=0;resizable=0;movable=0;allowArrows=0;connectable=0;fillColor=none;expand=0;dropTarget=0;" parent="6wwsTJ6x3xA64zQriAsa-1" vertex="1">
+          <mxGeometry x="5" y="5" width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="seVKvCqvTzsUIqkJmeDL-7" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=default;movable=0;rotatable=0;cloneable=0;deletable=0;allowArrows=0;expand=0;resizable=0;recursiveResize=0;" parent="seVKvCqvTzsUIqkJmeDL-6" vertex="1">
+          <mxGeometry width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="seVKvCqvTzsUIqkJmeDL-8" value="&lt;span style=&quot;font-size: 16px&quot;&gt;RAT FÜR&lt;br&gt;GEGENSEITIGE&lt;br&gt;WIRTSCHAFTSHILFE&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;strokeColor=default;fontSize=16;movable=0;rotatable=0;cloneable=0;deletable=0;allowArrows=0;expand=0;resizable=0;recursiveResize=0;" parent="seVKvCqvTzsUIqkJmeDL-7" vertex="1">
+          <mxGeometry width="210" height="180" as="geometry">
+            <mxRectangle width="210" height="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seVKvCqvTzsUIqkJmeDL-9" value="" style="shape=table;startSize=0;container=0;collapsible=0;childLayout=tableLayout;strokeColor=default;gradientColor=none;aspect=fixed;deletable=0;cloneable=0;rotatable=0;resizable=0;movable=0;allowArrows=0;connectable=0;fillColor=none;expand=0;dropTarget=0;" parent="6wwsTJ6x3xA64zQriAsa-1" vertex="1">
+          <mxGeometry x="895" y="5" width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="seVKvCqvTzsUIqkJmeDL-10" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=default;movable=0;rotatable=0;cloneable=0;deletable=0;allowArrows=0;expand=0;resizable=0;connectable=0;recursiveResize=0;" parent="seVKvCqvTzsUIqkJmeDL-9" vertex="1">
+          <mxGeometry width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="seVKvCqvTzsUIqkJmeDL-11" value="MS 93-82" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;strokeColor=default;fontSize=22;fontStyle=1;verticalAlign=top;movable=0;rotatable=0;cloneable=0;deletable=0;allowArrows=0;expand=0;resizable=0;recursiveResize=0;" parent="seVKvCqvTzsUIqkJmeDL-10" vertex="1">
+          <mxGeometry width="210" height="180" as="geometry">
+            <mxRectangle width="210" height="180" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
