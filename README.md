@@ -20,11 +20,17 @@ For more details about [ESKD] see the README in [KiCad environment for ESKD].
 **The libraries in this repository are intended for KiCad version 6.x**
 
 Each symbol library is stored as a `.kicad_sym` file below the `symbols`
-directory.
+directory. See KiCad online documentation to understand the new KiCad
+version 6.x [Symbol Library File Format] if needed.
+
+[Symbol Library File Format]: https://dev-docs.kicad.org/en/file-formats/sexpr-symbol-lib
 
 Each footprint library is stored as a directory with the `.pretty` suffix
 below the `footprints` directory. The footprint files are `.kicad_mod` files
-within.
+within. See KiCad online documentation to understand the new KiCad version 6.x
+[Footprint Library File Format] if needed.
+
+[Footprint Library File Format]: https://dev-docs.kicad.org/en/file-formats/sexpr-footprint
 
 Each 3D model library is stored as a directory with the `.3dshapes` suffix
 below the `3dmodels` directory. The 3D model files are `.step` and `.wrl`
@@ -83,6 +89,15 @@ As an orientation of a good library structure the official (original)
 * [Symbols](https://kicad.github.io/symbols) – Schematic symbol libraries
 * [Footprints](https://kicad.github.io/footprints) – PCB footprint libraries
 * [3D models](https://kicad.github.io/packages3d) – 3D model data
+
+**KLC exceptions and extensions**
+
+* [S1.1] *Symbol libraries should be categorized by function* –  Each symbol
+  library name has field 6 *(Extra library descriptors)* containing the value
+ `ESKD`. Existing keywords are supposed to be used and mix with this value as
+  prefix (e.g.: `ESKD_Deprecated`).
+
+[S1.1]: https://klc.kicad.org/symbol/s1/s1.1/ "KLC: Symbol libraries should be categorized by function"
 
 Other ESKD KiCad repositories are located on:
 
