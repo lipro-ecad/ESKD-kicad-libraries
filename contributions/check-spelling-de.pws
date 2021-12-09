@@ -1,8 +1,9 @@
-personal_ws-1.1 de 94 
+personal_ws-1.1 de 101 
 Analogtechnik
 Anreicherungstyp
 Anschlussbezeichnungen
 Anwendung
+Ausführungsregeln
 Bauwesens
 Begriffshierarchie
 Beispiele
@@ -56,6 +57,7 @@ Linienbreite
 Liniengruppe
 Magnetbändern
 Massekern
+Mindestabstand
 Nr
 Oberflächenrauheit
 Pentode
@@ -71,7 +73,10 @@ Schaltzeichenelemente
 Schaltzeichens
 Schleifendipolantenne
 Schließkontakt
+Schrifthöhe
+Sinnbilder
 Spannungs
+Spitzenwinkel
 TGL
 Teilfunktionen
 Telefonumschalter
@@ -81,9 +86,11 @@ Triodenthyristor
 Umschaltkontakt
 Vakuumröhre
 Verbindungslinien
+Vollinien
 Zeichenautomaten
 Zusatzsinnbilder
 Zweckbestimmung
+aneinanderzureihen
 bzw
 einliniger
 gleichschenklige
