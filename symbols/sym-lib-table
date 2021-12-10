@@ -1,2 +1,3 @@
 (sym_lib_table
+  (lib (name "Construction_ESKD")(type "KiCad")(uri "Construction_ESKD.kicad_sym")(options "")(descr "ESKD Engineering symbols, signs and tokens"))
 )
