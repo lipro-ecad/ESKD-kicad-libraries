@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name "Construction_ESKD")(type "KiCad")(uri "Construction_ESKD.kicad_sym")(options "")(descr "ESKD Engineering symbols, signs and tokens"))
+  (lib (name "Device_ESKD")(type "KiCad")(uri "Device_ESKD.kicad_sym")(options "")(descr "ESKD Generic symbols for common devices"))
 )
