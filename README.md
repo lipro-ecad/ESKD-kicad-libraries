@@ -62,6 +62,7 @@ models because of size increasing, anyway in case of text the fonts must be
 licensed free as the word. WRL models should be exported from its mechanical
 counterpart and, when possible, have the suggested material properties as in
 these documents:
+
 * [WRL Material Properties]
 * [WRL Illumination model]
 
@@ -92,12 +93,105 @@ As an orientation of a good library structure the official (original)
 
 **KLC exceptions and extensions**
 
-* [S1.1] *Symbol libraries should be categorized by function* –  Each symbol
+* [S1.1] *Symbol libraries should be categorized by function* – Each symbol
   library name has field 6 *(Extra library descriptors)* containing the value
  `ESKD`. Existing keywords are supposed to be used and mix with this value as
   prefix (e.g.: `ESKD_Deprecated`).
+* [S3.3] *Symbol outline and fill requirements* – Symbol body must have a line
+  width of `0mil` (0mm) to use default value from template. The boxes of all
+  symbols, regardless of their function as IC with hidden functionality or
+  discrete component or those with a distinctive shape, should not have any
+  fillings. In extremely rare cases, e.g. for marking mechanical details, the
+  line color is used for filling. This achieves a particularly high contrast
+  even in a black and white representation. However, these filled areas should
+  only have a very small area in relation to the area of the entire symbol.
+
+  **NOTE:** The CI workflow will exclude the KLC S3.3 rule check.
 
 [S1.1]: https://klc.kicad.org/symbol/s1/s1.1/ "KLC: Symbol libraries should be categorized by function"
+[S3.3]: https://klc.kicad.org/symbol/s3/s3.3/ "KLC: Symbol outline and fill requirements"
+
+**KLC compliance check and 3D model coverage**
+
+The KiCad library team has developed a set of
+[Python scripts][kicad-library-utils] which can be used to help test if
+library components conform to the KLC requirements. When a merge request
+is made to the ESKD KiCad libraries, the contributed files are automatically
+checked using these scripts. It can be helpful to run these scripts on your
+local machine before submitting a PR, as it will help speed up the process
+of merging your contribution(s) into the ESKD KiCad library.
+
+Below you will see quick notes how to work with this helper scripts. See
+more usage examples in the readme at the link above.
+
+*Clone the KiCad library utility Python scripts*:
+```sh
+git clone --single-branch --depth 1 \
+    https://gitlab.com/kicad/libraries/kicad-library-utils.git \
+    /tmp/klc-utils
+```
+
+*Symbol Library Checker:*
+```sh
+/tmp/klc-utils/klc-check/check_symbol.py --help
+
+/tmp/klc-utils/klc-check/check_symbol.py \
+    --verbose symbols/*.kicad_sym
+
+/tmp/klc-utils/klc-check/check_symbol.py \
+    --verbose symbols/*.kicad_sym --footprints footprints
+
+/tmp/klc-utils/klc-check/check_lib_table.py \
+    --table symbols/sym-lib-table symbols/*.kicad_sym
+
+# use the GitHub CI workflow scripts:
+UTILS=/tmp/klc-utils NEWLIBS=. OLDLIBS=. \
+./.github/qa-compliance/check_symbols.sh
+```
+
+*Footprint Checker:*
+```sh
+/tmp/klc-utils/klc-check/check_footprint.py --help
+
+/tmp/klc-utils/klc-check/check_footprint.py \
+    --verbose footprints/*.pretty/*.kicad_mod
+
+/tmp/klc-utils/klc-check/check_lib_table.py \
+    --table footprints/fp-lib-table footprints/*.pretty
+
+# use the GitHub CI workflow scripts:
+UTILS=/tmp/klc-utils NEWLIBS=. OLDLIBS=. \
+./.github/qa-compliance/check_footprints.sh
+```
+
+*3D Model Checker:*
+```sh
+python3 /tmp/klc-utils/packages3d/check_3dmodels.py --help
+
+python3 /tmp/klc-utils/packages3d/check_3dmodels.py \
+    --verbose --pretty footprints/*.pretty \
+              --models 3dmodels/*.3dshapes
+
+# use the GitHub CI workflow scripts:
+UTILS=/tmp/klc-utils NEWLIBS=. OLDLIBS=. \
+./.github/qa-compliance/check_3dmodels.sh
+```
+
+*3D Model Coverage:*
+```sh
+/tmp/klc-utils/klc-check/check_3d_coverage.py --help
+
+ln -rvsf 3dmodels footprints/packages3D \
+&& /tmp/klc-utils/klc-check/check_3d_coverage.py \
+       --verbose --usepackages3D --root footprints \
+ ; rm -vf footprints/packages3D
+
+# use the GitHub CI workflow scripts:
+UTILS=/tmp/klc-utils NEWLIBS=. OLDLIBS=. \
+./.github/qa-compliance/check_3d_coverage.sh
+```
+
+[kicad-library-utils]: https://gitlab.com/kicad/libraries/kicad-library-utils
 
 Other ESKD KiCad repositories are located on:
 

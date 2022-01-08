@@ -1,0 +1,171 @@
+# Copyright (c) 2022 Li-Pro.Net
+# SPDX-License-Identifier: MIT
+
+name: QA Compliance Check
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # run at 2 AM UTC
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
+      - next
+
+jobs:
+  qa-compliance:
+    name: Run compliance checks on patch series (PR) or commits
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Update GitHub PATH for Python
+        run: |
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Checkout pushed libraries
+        id: checkout-new-libraries-push
+        uses: actions/checkout@v2
+        if: contains(github.event_name, 'push')
+        with:
+          fetch-depth: 0
+          path: newlibs
+
+      - name: Checkout the libraries from PR
+        id: checkout-new-libraries-pr
+        uses: actions/checkout@v2
+        if: contains(github.event_name, 'pull_request')
+        with:
+          fetch-depth: 0
+          path: newlibs
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Checkout the utilities
+        id: checkout-kicad-library-utils
+        uses: sudosubin/git-clone-action@v1.0.1
+        with:
+# not yet fetch-depth: 1
+          path: utils
+          platform: gitlab
+          repository: kicad/libraries/kicad-library-utils
+
+      - name: Setup Python 3.8
+        id: python3-setup
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+          cache: pip
+
+      - name: Install base dependencies
+        id: python3-dependencies
+        run: |
+          pip install -U -r .github/python/requirements.txt
+          # debug
+          python -V
+          pip -V
+          pip list
+        working-directory: ${{ github.workspace }}/newlibs
+
+      - name: Run compliance tests on symbols
+        id: compliance-symbols
+        if: always()
+        run: |
+          echo "::set-output name=logging::check_symbols.log"
+          echo "::set-output name=metrics::metrics_symbols.txt"
+          ${NEWLIBS}/.github/qa-compliance/check_symbols.sh
+        env:
+          UTILS: ${{ github.workspace }}/utils
+          NEWLIBS: ${{ github.workspace }}/newlibs
+          OLDLIBS: ${{ github.workspace }}/newlibs
+#       continue-on-error: true
+#     - name: Have invalid symbol libraries
+#       if: steps.compliance-symbols.outcome == 'failure'
+#       run:
+
+      - name: Run compliance tests on footprints
+        id: compliance-footprints
+        if: always()
+        run: |
+          echo "::set-output name=logging::check_footprints.log"
+          echo "::set-output name=metrics::metrics_footprints.txt"
+          ${NEWLIBS}/.github/qa-compliance/check_footprints.sh
+        env:
+          UTILS: ${{ github.workspace }}/utils
+          NEWLIBS: ${{ github.workspace }}/newlibs
+          OLDLIBS: ${{ github.workspace }}/newlibs
+#       continue-on-error: true
+#     - name: Have invalid footprint libraries
+#       if: steps.compliance-footprints.outcome == 'failure'
+#       run:
+
+      - name: Run compliance tests on 3D models
+        id: compliance-3dmodels
+        if: always()
+        run: |
+          echo "::set-output name=logging::check_3dmodels.log"
+          echo "::set-output name=metrics::metrics_3dmodels.txt"
+          ${NEWLIBS}/.github/qa-compliance/check_3dmodels.sh
+        env:
+          UTILS: ${{ github.workspace }}/utils
+          NEWLIBS: ${{ github.workspace }}/newlibs
+          OLDLIBS: ${{ github.workspace }}/newlibs
+#       continue-on-error: true
+#     - name: Have invalid 3D models libraries
+#       if: steps.compliance-3dmodels.outcome == 'failure'
+#       run:
+
+      - name: Run 3D model coverage on footprints
+        id: coverage-3dmodels-footprints
+        if: always()
+        run: |
+          echo "::set-output name=logging::check_3d_coverage.log"
+          echo "::set-output name=metrics::metrics_3d_coverage.txt"
+          ${NEWLIBS}/.github/qa-compliance/check_3d_coverage.sh
+        env:
+          UTILS: ${{ github.workspace }}/utils
+          NEWLIBS: ${{ github.workspace }}/newlibs
+#       continue-on-error: true
+#     - name: Have invalid 3D model coverage on footprints
+#       if: steps.coverage-3dmodels-footprints.outcome == 'failure'
+#       run:
+
+      - name: Upload symbols compliance results
+        id: upload-compliance-symbols-results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: compliance-symbols
+          path: |
+            ${{ steps.compliance-symbols.outputs.logging }}
+            ${{ steps.compliance-symbols.outputs.metrics }}
+
+      - name: Upload footprints compliance results
+        id: upload-compliance-footprints-results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: compliance-footprints
+          path: |
+            ${{ steps.compliance-footprints.outputs.logging }}
+            ${{ steps.compliance-footprints.outputs.metrics }}
+
+      - name: Upload 3D models compliance results
+        id: upload-compliance-3dmodels-results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: compliance-3dmodels
+          path: |
+            ${{ steps.compliance-3dmodels.outputs.logging }}
+            ${{ steps.compliance-3dmodels.outputs.metrics }}
+
+      - name: Upload 3D model coverage results
+        id: upload-coverage-3dmodels-footprints-results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage-3dmodels-footprints
+          path: |
+            ${{ steps.coverage-3dmodels-footprints.outputs.logging }}
+            ${{ steps.coverage-3dmodels-footprints.outputs.metrics }}
+
